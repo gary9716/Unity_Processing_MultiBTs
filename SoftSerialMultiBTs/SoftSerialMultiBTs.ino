@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial btSerial = SoftwareSerial(8,9);
+SoftwareSerial btSerial = SoftwareSerial(4,5);
 SoftwareSerial btSerial2 = SoftwareSerial(6,7);
 
 void setup() {

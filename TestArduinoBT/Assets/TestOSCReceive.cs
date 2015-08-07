@@ -21,7 +21,11 @@ public class TestOSCReceive : MonoBehaviour {
 	public void oscReceiver(OscMessage oscMsg) {
 		//Debug.Log("Event name: " + Osc.OscMessageToString(oscMsg));
 		if (oscMsg.Values != null && oscMsg.Values.Count > 0) {
-			Debug.Log ("Event data: " + oscMsg.Values [0]);
+			string msg = oscMsg.Values [0].ToString().TrimEnd();
+			Debug.Log("Event data:" + msg);
+			if(msg.Equals("I'm bt1")) {
+				Debug.Log ("Yes, bt1");
+			}
 		}
 	}
 
